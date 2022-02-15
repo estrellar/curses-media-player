@@ -1,0 +1,4 @@
+media/
+.vscode/
+*.o
+*.out
