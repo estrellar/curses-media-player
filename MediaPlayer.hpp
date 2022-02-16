@@ -13,14 +13,12 @@ using namespace std;
  
 class MediaPlayer
 {
-  
   public:
-
     MediaPlayer(string media_path = "./media/");
     ~MediaPlayer();
-    vector<Track*> history();
-    bool setTrack(Track track);
-    bool nextTrack();
+    //vector<Track> history();
+    // bool setTrack(Track track);
+    // bool nextTrack();
     void handleScreenResize();
     
     //bool changeAnimation(Animation anime);
@@ -31,10 +29,10 @@ class MediaPlayer
     void printMedia(int offset = 0);
     void drawDividers();
     string _media_path;
-    list<Track> _q;
-    vector<Track> _history;
+    list<Track*> _q;
+    vector<Track*> _history;
     vector<Album> _albums;
-    Track _now_playing;
+    Track* _now_playing;
     int _maxx, _maxy, _cursor_x, _cursor_y, _animate_divider, _history_divider;
 
 };

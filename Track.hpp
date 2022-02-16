@@ -10,10 +10,8 @@ class Track : public Media
   public:
     Track(string path);
     ~Track();
-
-    string getName();
     int getTrackNum();
   private:
-    string path;
+    string _track_num;
 };
 #endif //TRACK_HPP
