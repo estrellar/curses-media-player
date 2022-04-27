@@ -1,6 +1,6 @@
 GCC = g++
 OUT = player.out
-FLAGS = -g -lncurses
+FLAGS = -g -lncurses -I/usr/local/include -L/usr/local/lib 
 
 player.out : Player.o Track.o Album.o MediaPlayer.o Media.o
 	$(GCC) -g -o $(OUT) Media.o Track.o Album.o MediaPlayer.o Player.o  $(FLAGS)

@@ -2,6 +2,7 @@
 
 Track::Track(string path)
 {
+  this->_path = path;
   auto split = this->_path.find('-');
   if(split != string::npos){
     this->_track_num = atoi(this->_path.substr(0, split-1).c_str());
